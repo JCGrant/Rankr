@@ -3,6 +3,10 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import { EvilIcons } from '@expo/vector-icons';
 
 export default class Profile extends React.Component {
+  static navigationOptions = {
+    title: 'Profile',
+  }
+
   render() {
     return (
       <View style={styles.container}>
