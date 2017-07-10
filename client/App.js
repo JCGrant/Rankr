@@ -5,7 +5,11 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Hello World! This is Rankr!</Text>
+        <Text>Rankr</Text>
+        <Text>#2706</Text>
+        <Image source={require('./img/girl.jpg')} />
+        <Text>7.6<Text>83</Text></Text>
+        <Image source={require('.img/swipe-icon.svg')} />
       </View>
     );
   }
