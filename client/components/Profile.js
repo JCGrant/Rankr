@@ -3,6 +3,10 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default class Profile extends React.Component {
+  static navigationOptions = {
+    title: 'Profile',
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -14,11 +18,8 @@ export default class Profile extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 25,
-    marginBottom: 10,
     flex: 1,
     alignItems: 'center',
-    backgroundColor: 'white',
   },
 
   header: {

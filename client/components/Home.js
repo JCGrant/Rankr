@@ -1,15 +1,24 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default class Home extends React.Component {
+  static navigationOptions = {
+    title: 'RANKR',
+  }
+
+  _onPressPicture = () => {
+    this.props.navigation.navigate('Profile');
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.top}>
-          <Text style={styles.header}>RANKR</Text>
           <Text style={styles.rankText}>#2706</Text>
-          <Image style={styles.homeImage} source={require('../img/girl.jpg')} />
+          <TouchableOpacity onPress={this._onPressPicture}>
+            <Image style={styles.homeImage} source={require('../img/girl.jpg')} />
+          </TouchableOpacity>
           <Text style={styles.scoreText}>7.6<Text style={styles.subScoreText}>83</Text></Text>
         </View>
         <View style={styles.bottom}>
@@ -22,11 +31,8 @@ export default class Home extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 25,
-    marginBottom: 10,
     flex: 1,
     alignItems: 'center',
-    backgroundColor: 'white',
   },
 
   top: {
